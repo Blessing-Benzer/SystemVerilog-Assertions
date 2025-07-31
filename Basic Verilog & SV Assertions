@@ -55,7 +55,12 @@ module tb;
   A1: assert property ( @(posedge clk)  a |-> ##4 b) $info("SVA Success at %0t",$time);
   
   
-  end
+   initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars;
+    $assertvacuousoff(0); 
+    #200;
+    $finish;
     
     
   

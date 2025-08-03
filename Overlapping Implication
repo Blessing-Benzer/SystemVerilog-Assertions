@@ -63,3 +63,16 @@ module tb;
   end
  
 endmodule
+
+/*
+////to filterout vacuous success
+
+  initial begin 
+    $dumpfile("dump.vcd");
+    $dumpvars;
+    $assertvacuousoff(0);
+    #60;
+    $finish();
+  end
+
+*/
